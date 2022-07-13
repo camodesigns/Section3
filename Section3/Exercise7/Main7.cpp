@@ -30,21 +30,39 @@ int main()
 		}
 		ArrayUser[UserSpace] = UserValues;
 	}
+	srand(time(NULL));
+	int Answer = (rand() % 8) + 1;
+	srand(time(NULL));
+	int Answer = (rand() % 8) + 1;
+	srand(time(NULL));
+	int Answer = (rand() % 8) + 1;
+	srand(time(NULL));
+	int Answer = (rand() % 8) + 1;
+	srand(time(NULL));
+	int Answer = (rand() % 8) + 1;
 	cout << "Lottery results: " << endl;
 	for (int LoterySpace = 0; LoterySpace < ArrLoterySize; LoterySpace++) 
 	{
 		int LoteryValue = 1 + rand() % (21 -1);
 		cout << LoteryValue<<",";
 		ArrayLotery[LoterySpace] = LoteryValue;
-
 	}
 
 	int Profits=0;
-	for (int Result = 0; Result < 6; Result++) 
-	{
-		if (ArrayLotery[Result] == ArrayUser[Result]) {
-			Profits += 10;
-		}
+	if (ArrayLotery[0] == ArrayUser[0]) {
+		Profits += 10;
+	}
+	else if (ArrayLotery[1] == ArrayUser[1]) {
+		Profits += 10;
+	}
+	else if (ArrayLotery[2] == ArrayUser[2]) {
+		Profits += 10;
+	}
+	else if (ArrayLotery[3] == ArrayUser[3]) {
+		Profits += 10;
+	}
+	else if (ArrayLotery[4] == ArrayUser[4]) {
+		Profits += 10;
 	}
 	cout << endl;
 	cout << "Your winnings: " << Profits << endl;
