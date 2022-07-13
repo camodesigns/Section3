@@ -1,3 +1,6 @@
+/*Exercise 1 - Input Validation
+Write a program that will ask the user to enter a number between 1-10. Keep asking the same question until a valid input is given. Add an annoyed comment if they take more than a certain number of tries.
+*/
 #include<iostream>
 #include<iomanip>
 using namespace std;

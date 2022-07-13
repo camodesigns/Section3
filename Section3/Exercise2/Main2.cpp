@@ -1,3 +1,7 @@
+/*Exercise 2 - More Input Validation
+Rewrite the true or false quiz you did in the previous section. This time, instead of asking for 1 or 2 as inputs, ask them to answer T or F. If they enter invalid input, give them a couple of tries before you automatically fail them.
+*/
+
 #include<iostream>
 using namespace std;
 int main() {
