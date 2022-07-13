@@ -6,11 +6,10 @@ int main() {
 	for (int i = 0; i < 101; i++) {
 		if (i % 10 == 0) {
 			int n = 0;
-			int *Multiplos= new int[n];
+			int *Multiples= new int[n];
 			for (int o = 0; o < n+1; o++) {
-				Multiplos[o] = i;
-				cout << Multiplos[o] <<",";
-				
+				Multiples[o] = i;
+				cout << Multiples[o] <<",";
 			}
 			n += 1;
 		}
