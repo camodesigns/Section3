@@ -20,7 +20,14 @@ bool repeatValues(int arrRepeat[], int size) {
 	}
 	return false;
 }
-
+bool profits(int list[], int size, int number)
+{
+	for (int i = 0; i < size; i++)
+	{
+		if (list[i] == number) return true;
+	}
+	return false;
+}
 
 int main()
 {
@@ -74,12 +81,16 @@ int main()
 			cout << ArrayLotery[L] << ",";
 		}
 	int Profits = 0;
-	for (int Result = 0; Result < 6; Result++)
+	for (int Winn = 0; Winn < 5; Winn++)
 	{
-		if (ArrayLotery[Result] == ArrayUser[Result]) {
-			Profits+10;
-		}
+		if (profits(ArrayLotery, ArrLoterySize, ArrayUser[Winn])) {
+			Profits += 10;
+		};
 	}
+	
+	
+
+	
 	cout << endl;
 	cout << "Your winnings: " << Profits << endl;
 

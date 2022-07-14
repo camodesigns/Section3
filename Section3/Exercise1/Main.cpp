@@ -18,7 +18,6 @@ int main() {
 		cin >> Number;
 
 		Counter += 1;
-		cout <<Counter << endl;
 		if (
 			Counter >5) {
 			cout<<"No more think loser"<<endl;
