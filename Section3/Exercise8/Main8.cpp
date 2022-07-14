@@ -87,10 +87,6 @@ int main()
 			Profits += 10;
 		};
 	}
-	
-	
-
-	
 	cout << endl;
 	cout << "Your winnings: " << Profits << endl;
 
