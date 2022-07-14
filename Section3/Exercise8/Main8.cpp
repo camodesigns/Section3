@@ -5,6 +5,23 @@ Rewrite the previous lottery but now instead of getting $10 for each number matc
 #include <cstdlib>    
 #include <ctime>  
 using namespace std;
+
+
+bool repeatValues(int arrRepeat[], int size) {
+	for (int pos = 1; pos < size; pos++) 
+	{
+		for(int posL=0;posL<pos;posL++)
+		{
+			if (arrRepeat[pos] == arrRepeat[posL]) 
+			{
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
+
 int main()
 {
 	int ArrayLotery[5];
@@ -13,12 +30,14 @@ int main()
 	int ArrUserSize = sizeof(ArrayUser) / sizeof(ArrayUser[0]);
 
 	cout << "Welcome to the lottery!" << endl;
-	int UserValues, entry = 1;
+
+	
+	int UserValues;
 
 	for (int UserSpace = 0; UserSpace < ArrUserSize; UserSpace++)
 	{
+		int entry = UserSpace+1;
 		cout << "Please enter your entry number #" << entry << "(1-20)" << endl;
-		entry += 1;
 		cin >> UserValues;
 		for (int pruebaU = 0; pruebaU < ArrUserSize; pruebaU++)
 		{
@@ -26,8 +45,7 @@ int main()
 				cout << "Sorry equal number" << endl;
 				cin.clear();
 				cin.ignore(1000, '\n');
-				 UserSpace-= 1;
-				 entry -= 1;
+				UserSpace -= 1;
 			}
 		}
 
@@ -35,30 +53,26 @@ int main()
 			cout << "Sorry, invalid Input! or equal number  " << endl;;
 			cin.clear();
 			cin.ignore(1000, '\n');
-			entry -= 1;
 			UserSpace -= 1;
 		}
 		ArrayUser[UserSpace] = UserValues;
 	}
-	cout << "Lottery results: " ;
-	srand(time(0));
-	for (int LoterySpace = 0; LoterySpace < ArrLoterySize; LoterySpace++)
-	{
-		int LoteryValue = rand() % 20;
-		cout << LoteryValue << ",";
-		ArrayLotery[LoterySpace] = LoteryValue;
-
-		for (int prueba = 0; prueba < ArrLoterySize; prueba++)
-		{
-			if (ArrayLotery[prueba]==LoteryValue) {
-				prueba -= 1;
-				int LoteryValue = rand() % 20;
-				ArrayLotery[LoterySpace] = LoteryValue;
-			}
-		}
 	
-	}
+	srand(time(0));
+		
+		do {
+			for (int Result = 0; Result < ArrLoterySize; Result++) 
+			{
+				int LoteryValue = (rand() % 20) + 1;
+				ArrayLotery[Result] = LoteryValue;
+			}
 
+		} while (repeatValues(ArrayLotery, ArrLoterySize));
+		cout << "Lottery results: ";
+		for (int L = 0; L < ArrLoterySize; L++)
+		{
+			cout << ArrayLotery[L] << ",";
+		}
 	int Profits = 0;
 	for (int Result = 0; Result < 6; Result++)
 	{
