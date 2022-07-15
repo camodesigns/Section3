@@ -18,7 +18,7 @@ int main() {
 	while(Answer1!='T'&& Answer1!='F') 
 	{
 		if(FaultCounter <5){
-		cout << "Invalid Input, try again! " << endl;;
+			cout << "Invalid Input, try again! " << endl;
 		cin.clear();
 		cin.ignore(1000, '\n');
 		cout << "Please enter your answer again" << endl;
@@ -44,9 +44,9 @@ int main() {
 	cout << "Question 2(2pts)" << endl;
 	cout << "2.The human is composed for 80% water?" << endl;
 	cin >> Answer2;
-	while (Answer2 != 'T' && Answer1 != 'F') {
+	while (Answer2 != 'T' && Answer2 != 'F') {
 		if (FaultCounter2 < 5) {
-			cout << "Invalid Input, try again! " << endl;;
+			cout << "Invalid Input, try again! " << endl;
 			cin.clear();
 			cin.ignore(1000, '\n');
 			cout << "Please enter your answer again" << endl;
@@ -73,9 +73,9 @@ int main() {
 	cout << "Question 3(2pts)" << endl;
 	cout << "3. Teravision Games is a Shoes Company" << endl;
 	cin >> Answer3;
-	while (Answer3 != 'T' && Answer1 != 'F') {
+	while (Answer3 != 'T' && Answer3 != 'F') {
 		if (FaultCounter3 < 5) {
-			cout << "Invalid Input, try again! " << endl;;
+			cout << "Invalid Input, try again! " << endl;
 			cin.clear();
 			cin.ignore(1000, '\n');
 			cout << "Please enter your answer again" << endl;
@@ -88,11 +88,11 @@ int main() {
 			cout << "No more intents" << endl;
 			return 0;
 		}
-		if (Answer2 == 'F')
+		if (Answer3 == 'F')
 		{
 			cout << "WRONG! Really Niga" << endl;
 		}
-		else if (Answer2 == 'T')
+		else if (Answer3 == 'T')
 		{
 			cout << "CORRECT!You know about good services!" << endl;
 			Score += 2.0f;
