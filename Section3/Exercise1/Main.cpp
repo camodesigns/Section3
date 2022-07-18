@@ -9,7 +9,8 @@ int main() {
 	cout << " Please enter a number between 1-10 please" << endl;
 	cin >> Number;
 	int Counter = 0;
-	while (Number > 10 || Number < 1 || (!(cin >> Number))) 
+
+	while (cin.good()==false || Number > 10 || Number < 1 ) 
 	{
 		cout << "Invalid Input, try again! " << endl;;
 		cin.clear();
@@ -18,11 +19,12 @@ int main() {
 		cin >> Number;
 
 		Counter += 1;
-		if (
-			Counter >5) {
-			cout<<"No more think loser"<<endl;
+		if (Counter >4)
+		{
+			cout<<"No more Attempts, Loser"<<endl;
 		}
-		cout << "Your Number is:" << Number << endl;
 	}
+
+	cout <<"You FINALLY entered:" << Number << endl;
 	return 0;
 }
