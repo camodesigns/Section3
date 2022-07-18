@@ -8,8 +8,10 @@ using namespace std;
 int main() {
 	int sum = 0;
 	cout << "Multiples of 10 " << "[";
-	for (int i = 10; i < 101; i+=10) {
-		if (i % 10 == 0) {
+	for (int i = 10; i < 101; i+=10) 
+	{
+		if (i % 10 == 0) 
+		{
 			cout << i<<",";	
 		}
 	}

@@ -7,16 +7,17 @@ If the user exceeds the size of your array, tell them about it and then output t
 using namespace std;
 int main()
 {
-	int Number,Addition=0,IntegerCounter=0;
+	int Addition=0,IntegerCounter=0;
 	int Array[6];
 	int ArrSize = sizeof(Array) / sizeof(Array[0]);
 	for (int i = 0; i < ArrSize; i++)
 	{
-		cout << "Enter Enter a number if you want:"<<endl ;
+		int Number;
+		cout << "Enter a number if you want:"<<endl ;
 		cin >> Number;
 		IntegerCounter += 1;
 		if (!cin.good() ) {
-			cout << "Sorry, invalid Input! " << endl;;
+			cout << "Sorry, invalid Input! " << endl;
 			cin.clear();
 			cin.ignore(1000, '\n');
 			IntegerCounter -= 1;
