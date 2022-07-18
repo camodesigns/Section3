@@ -10,7 +10,7 @@ int main() {
 	cin >> Number;
 	int Counter = 0;
 
-	while (cin.good()==false || Number > 10 || Number < 1 ) 
+	while (!cin.good() || Number > 10 || Number < 1 ) 
 	{
 		cout << "Invalid Input, try again! " << endl;;
 		cin.clear();

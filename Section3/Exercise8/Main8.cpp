@@ -48,7 +48,8 @@ int main()
 		cin >> UserValues;
 		for (int pruebaU = 0; pruebaU < ArrUserSize; pruebaU++)
 		{
-			if (ArrayUser[pruebaU] == UserValues) {
+			if (ArrayUser[pruebaU] == UserValues)
+			{
 				cout << "Sorry equal number" << endl;
 				cin.clear();
 				cin.ignore(1000, '\n');
@@ -56,7 +57,8 @@ int main()
 			}
 		}
 
-		if ((!cin.good()) || UserValues < 1 || UserValues>20) {
+		if ((!cin.good()) || UserValues < 1 || UserValues>20) 
+		{
 			cout << "Sorry, invalid Input! or equal number  " << endl;;
 			cin.clear();
 			cin.ignore(1000, '\n');
@@ -67,7 +69,8 @@ int main()
 	
 	srand(time(0));
 		
-		do {
+		do 
+		{
 			for (int Result = 0; Result < ArrLoterySize; Result++) 
 			{
 				int LoteryValue = (rand() % 20) + 1;
@@ -83,7 +86,8 @@ int main()
 	int Profits = 0;
 	for (int Winn = 0; Winn < 5; Winn++)
 	{
-		if (profits(ArrayLotery, ArrLoterySize, ArrayUser[Winn])) {
+		if (profits(ArrayLotery, ArrLoterySize, ArrayUser[Winn])) 
+		{
 			Profits += 10;
 		};
 	}

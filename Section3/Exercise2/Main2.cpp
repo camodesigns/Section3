@@ -15,7 +15,7 @@ int main() {
 	cout << "Question 1(1pt)" << endl;
 	cout << "1. The meat is fruit?" << endl;
 	cin >> Answer1;
-	while(cin.good()|| Answer1!='T'&& Answer1!='F') 
+	while(!cin.good() || Answer1 != 'T' && Answer1 != 'F') 
 	{
 		if(FaultCounter <5)
 		{
@@ -47,7 +47,8 @@ int main() {
 	cin >> Answer2;
 	while (cin.good() || Answer2 != 'T' && Answer2 != 'F')
 	{
-		if (FaultCounter2 < 5) {
+		if (FaultCounter2 < 5)
+		{
 			cout << "Invalid Input, try again! " << endl;
 			cin.clear();
 			cin.ignore(1000, '\n');
@@ -75,9 +76,10 @@ int main() {
 	cout << "Question 3(2pts)" << endl;
 	cout << "3. Teravision Games is a Shoes Company" << endl;
 	cin >> Answer3;
-	while (cin.good() || Answer3 != 'T' && Answer3 != 'F')
+	while (!cin.good() || Answer3 != 'T' && Answer3 != 'F')
 	{
-		if (FaultCounter3 < 5) {
+		if (FaultCounter3 < 5) 
+		{
 			cout << "Invalid Input, try again! " << endl;
 			cin.clear();
 			cin.ignore(1000, '\n');

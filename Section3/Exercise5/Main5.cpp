@@ -16,7 +16,8 @@ int main()
 		cout << "Enter a number if you want:"<<endl ;
 		cin >> Number;
 		IntegerCounter += 1;
-		if (!cin.good() ) {
+		if (!cin.good() ) 
+		{
 			cout << "Sorry, invalid Input! " << endl;
 			cin.clear();
 			cin.ignore(1000, '\n');
@@ -25,7 +26,8 @@ int main()
 		}
 		Addition += Number;
 	}	
-	if (IntegerCounter == ArrSize) {
+	if (IntegerCounter == ArrSize) 
+	{
 		cout << "Sr. you exced the Array size" << ArrSize << endl;
 	}
 	cout << "Total numbers entered:" << IntegerCounter << endl;

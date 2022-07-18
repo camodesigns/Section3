@@ -14,9 +14,8 @@ int main() {
 		{
 			cout << i << ",";
 		}
-		else if(i%10>0) 
+		else if(i %10 >0) 
 		{
-			
 			sum += i;
 		}
 	}

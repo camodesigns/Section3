@@ -6,11 +6,11 @@ For each number that is matched in the same index, give the user $10.*/
 #include <ctime>  
 using namespace std;
 bool repeatValues(int arrRepeat[], int size) {
-	for (int Loteryposition = 1; Loteryposition < size; Loteryposition++)
+	for (int DataPosition = 1; DataPosition < size; DataPosition++)
 	{
-		for (int PositionComprobationLotery = 0; PositionComprobationLotery < Loteryposition; PositionComprobationLotery++)
+		for (int RepeatedDataPosition = 0; RepeatedDataPosition < DataPosition; RepeatedDataPosition++)
 		{
-			if (arrRepeat[Loteryposition] == arrRepeat[PositionComprobationLotery])
+			if (arrRepeat[DataPosition] == arrRepeat[RepeatedDataPosition])
 			{
 				return true;
 			}
@@ -20,9 +20,9 @@ bool repeatValues(int arrRepeat[], int size) {
 }
 int main()
 {
-	int ArrayLotery[5];
+	int ArrayLottery[5];
 	int ArrayUser[5];
-	int ArrLoterySize = sizeof(ArrayLotery) / sizeof(ArrayLotery[0]);
+	int ArrLotterySize = sizeof(ArrayLottery) / sizeof(ArrayLottery[0]);
 	int ArrUserSize = sizeof(ArrayUser) / sizeof(ArrayUser[0]);
 
 	cout << "Welcome to the lottery!" << endl;
@@ -38,7 +38,8 @@ int main()
 		cin >> UserValues;
 		for (int InputUserTest = 0; InputUserTest < ArrUserSize; InputUserTest++)
 		{
-			if (ArrayUser[InputUserTest] == UserValues) {
+			if (ArrayUser[InputUserTest] == UserValues) 
+			{
 				cout << "Sorry equal number" << endl;
 				cin.clear();
 				cin.ignore(1000, '\n');
@@ -46,7 +47,8 @@ int main()
 			}
 		}
 
-		if ((!cin.good()) || UserValues < 1 || UserValues>20) {
+		if ((!cin.good()) || UserValues < 1 || UserValues>20)
+		{
 			cout << "Sorry, invalid Input! or equal number  " << endl;;
 			cin.clear();
 			cin.ignore(1000, '\n');
@@ -58,22 +60,23 @@ int main()
 	srand(time(0));
 
 	do {
-		for (int Result = 0; Result < ArrLoterySize; Result++)
+		for (int Result = 0; Result < ArrLotterySize; Result++)
 		{
 			int LoteryValue = (rand() % 20) + 1;
-			ArrayLotery[Result] = LoteryValue;
+			ArrayLottery[Result] = LoteryValue;
 		}
 
-	} while (repeatValues(ArrayLotery, ArrLoterySize));
+	} while (repeatValues(ArrayLottery, ArrLotterySize));
 	cout << "Lottery results: ";
-	for (int LoteryResults = 0; LoteryResults < ArrLoterySize; LoteryResults++)
+	for (int LoteryResults = 0; LoteryResults < ArrLotterySize; LoteryResults++)
 	{
-		cout << ArrayLotery[LoteryResults] << ",";
+		cout << ArrayLottery[LoteryResults] << ",";
 	}
 	int Profits = 0;
 	for (int profitsVerification=0; profitsVerification < 5; profitsVerification++) 
 	{
-		if (ArrayUser[profitsVerification] == ArrayLotery[profitsVerification]) {
+		if (ArrayUser[profitsVerification] == ArrayLottery[profitsVerification]) 
+		{
 			Profits += 10;
 			
 		}
