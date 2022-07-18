@@ -6,11 +6,11 @@ For each number that is matched in the same index, give the user $10.*/
 #include <ctime>  
 using namespace std;
 bool repeatValues(int arrRepeat[], int size) {
-	for (int pos = 1; pos < size; pos++)
+	for (int Loteryposition = 1; Loteryposition < size; Loteryposition++)
 	{
-		for (int posL = 0; posL < pos; posL++)
+		for (int PositionComprobationLotery = 0; PositionComprobationLotery < Loteryposition; PositionComprobationLotery++)
 		{
-			if (arrRepeat[pos] == arrRepeat[posL])
+			if (arrRepeat[Loteryposition] == arrRepeat[PositionComprobationLotery])
 			{
 				return true;
 			}
@@ -28,16 +28,17 @@ int main()
 	cout << "Welcome to the lottery!" << endl;
 
 
-	int UserValues;
+
 
 	for (int UserSpace = 0; UserSpace < ArrUserSize; UserSpace++)
 	{
+		int UserValues;
 		int entry = UserSpace + 1;
 		cout << "Please enter your entry number #" << entry << "(1-20)" << endl;
 		cin >> UserValues;
-		for (int pruebaU = 0; pruebaU < ArrUserSize; pruebaU++)
+		for (int InputUserTest = 0; InputUserTest < ArrUserSize; InputUserTest++)
 		{
-			if (ArrayUser[pruebaU] == UserValues) {
+			if (ArrayUser[InputUserTest] == UserValues) {
 				cout << "Sorry equal number" << endl;
 				cin.clear();
 				cin.ignore(1000, '\n');
