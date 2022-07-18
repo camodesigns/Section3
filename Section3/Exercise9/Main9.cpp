@@ -17,8 +17,8 @@ This string reversed is: ++c ftW
 using namespace std;
 void printArray(char arr[],int ending)
 {
-    int i;
-    for (i = 0; i < ending; i++) 
+   
+    for (int i = 0; i < ending; i++)
     {  
         cout << arr[i];  
     }
