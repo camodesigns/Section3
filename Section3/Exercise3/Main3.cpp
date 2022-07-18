@@ -9,17 +9,12 @@ int main() {
 	int sum = 0;
 	cout<<"Multiples of 10 " << "[";
 	for (int i = 0; i < 101; i++) {
-		if (i % 10 == 0) {
-			int n = 0;
-			int *Multiples= new int[n];
-			for (int o = 0; o < n+1; o++) {
-				Multiples[o] = i;
-				cout << Multiples[o] <<",";
-			}
-			n += 1;
+		if (i % 10 == 0 && i!=0 ) {
+			cout << i << ",";
 		}
-		else if(i%10>0.0) {
-			sum += i+1;
+		else if(i%10>0) {
+			
+			sum += i;
 		}
 	}
 	cout << "]";
