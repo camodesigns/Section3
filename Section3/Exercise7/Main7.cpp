@@ -66,26 +66,17 @@ int main()
 
 	} while (repeatValues(ArrayLotery, ArrLoterySize));
 	cout << "Lottery results: ";
-	for (int L = 0; L < ArrLoterySize; L++)
+	for (int LoteryResults = 0; LoteryResults < ArrLoterySize; LoteryResults++)
 	{
-		cout << ArrayLotery[L] << ",";
+		cout << ArrayLotery[LoteryResults] << ",";
 	}
-
-	int Profits=0;
-	if (ArrayLotery[0] == ArrayUser[0]) {
-		Profits += 10;
-	}
-	else if (ArrayLotery[1] == ArrayUser[1]) {
-		Profits += 10;
-	}
-	else if (ArrayLotery[2] == ArrayUser[2]) {
-		Profits += 10;
-	}
-	else if (ArrayLotery[3] == ArrayUser[3]) {
-		Profits += 10;
-	}
-	else if (ArrayLotery[4] == ArrayUser[4]) {
-		Profits += 10;
+	int Profits = 0;
+	for (int profitsVerification=0; profitsVerification < 5; profitsVerification++) 
+	{
+		if (ArrayUser[profitsVerification] == ArrayLotery[profitsVerification]) {
+			Profits += 10;
+			
+		}
 	}
 	cout << endl;
 	cout << "Your winnings: " << Profits << endl;
