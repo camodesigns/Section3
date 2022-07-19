@@ -8,11 +8,11 @@ using namespace std;
 
 
 bool repeatValues(int arrRepeat[], int size) {
-	for (int pos = 1; pos < size; pos++) 
+	for (int DataPosition = 1; DataPosition < size; DataPosition++)
 	{
-		for(int posL=0;posL<pos;posL++)
+		for (int RepeatedDataPosition = 0; RepeatedDataPosition < DataPosition; RepeatedDataPosition++)
 		{
-			if (arrRepeat[pos] == arrRepeat[posL]) 
+			if (arrRepeat[DataPosition] == arrRepeat[RepeatedDataPosition])
 			{
 				return true;
 			}
@@ -46,9 +46,9 @@ int main()
 		int entry = UserSpace+1;
 		cout << "Please enter your entry number #" << entry << "(1-20)" << endl;
 		cin >> UserValues;
-		for (int pruebaU = 0; pruebaU < ArrUserSize; pruebaU++)
+		for (int InputUserTest = 0; InputUserTest < ArrUserSize; InputUserTest++)
 		{
-			if (ArrayUser[pruebaU] == UserValues)
+			if (ArrayUser[InputUserTest] == UserValues)
 			{
 				cout << "Sorry equal number" << endl;
 				cin.clear();

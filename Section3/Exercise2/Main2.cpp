@@ -17,7 +17,7 @@ int main() {
 	cin >> Answer1;
 	while(!cin.good() || Answer1 != 'T' && Answer1 != 'F') 
 	{
-		if(FaultCounter <5)
+		if(FaultCounter < 5)
 		{
 			cout << "Invalid Input, try again! " << endl;
 		cin.clear();
@@ -35,7 +35,7 @@ int main() {
 		{
 		cout << "WRONG! How could you miss that?" << endl;
 		}
-		else if(Answer1=='F')
+		else if(Answer1 == 'F')
 		{
 		cout << "CORRECT!Looks like you have common sense." << endl;
 		Score += 1.0f;
@@ -45,7 +45,7 @@ int main() {
 	cout << "Question 2(2pts)" << endl;
 	cout << "2.The human is composed for 80% water?" << endl;
 	cin >> Answer2;
-	while (cin.good() || Answer2 != 'T' && Answer2 != 'F')
+	while (cin.good() || Answer2  != 'T' &&  Answer2 !=  'F')
 	{
 		if (FaultCounter2 < 5)
 		{

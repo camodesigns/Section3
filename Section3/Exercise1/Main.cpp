@@ -19,7 +19,7 @@ int main() {
 		cin >> Number;
 
 		Counter += 1;
-		if (Counter >4)
+		if (Counter > 4)
 		{
 			cout<<"No more Attempts, Loser"<<endl;
 		}
